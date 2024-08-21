@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirección Aleatoria</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="redirect('celular')">Celular</button>
+    <button onclick="redirect('computadora')">Computadora</button>
+
+    <script>
+        function redirect(device) {
+            let linksCelular = [
+                "https://drive.google.com/file/d/1SfrNn6HEswNN_7wuIK19nDf5fqgmUcGz/view?usp=drive_link",
+                "https://drive.google.com/file/d/1_Eq8Kpgez60HaCXPTeXzIFUUHgNUYwrR/view?usp=drive_link"
+            ];
+
+            let linksComputadora = [
+                "https://drive.google.com/file/d/1fEwJ52xkanRigRJQEn4QACgrfHgFscdR/view?usp=drive_link",
+                "https://drive.google.com/file/d/1Fc5TtItJqZolgZTXnFA1dI9YJIRRbZFA/view?usp=drive_link"
+      
+            ];
+
+            let chosenLink;
+
+            if (device === 'celular') {
+                chosenLink = linksCelular[Math.floor(Math.random() * linksCelular.length)];
+            } else if (device === 'computadora') {
+                chosenLink = linksComputadora[Math.floor(Math.random() * linksComputadora.length)];
+            }
+
+            window.location.href = chosenLink;
+        }
+    </script>
+
+</body>
+</html>
