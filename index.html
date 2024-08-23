@@ -3,60 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirección Aleatoria</title>
+    <title>Página con Estilos</title>
+    
+    <!-- Enlace a Google Fonts para la tipografía Encode Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
+        /* Aplicar la tipografía Encode Sans a todo el documento */
         body {
+            font-family: 'Encode Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('ruta/a/tu/imagen.jpg'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
+            flex-direction: column;
         }
-        button {
-            padding: 15px 30px;
+
+        /* Estilos para los botones */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
             margin: 10px;
-            font-size: 18px;
-            cursor: pointer;
-            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+            background-color: transparent;
+            border: 2px solid black; /* Botón con línea negra */
+            text-decoration: none; /* Sin subrayado */
             border-radius: 5px;
-            background-color: #4CAF50;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button:hover {
+            background-color: black;
             color: white;
         }
-        button:hover {
-            background-color: #45a049;
+
+        /* Estilo para el enlace */
+        .link {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
-    <button onclick="redirect('celular')">Celular</button>
-    <button onclick="redirect('computadora')">Computadora</button>
-
-    <script>
-        function redirect(device) {
-            let linksCelular = [
-                "https://drive.google.com/file/d/1SfrNn6HEswNN_7wuIK19nDf5fqgmUcGz/view?usp=drive_link",
-                "https://drive.google.com/file/d/1_Eq8Kpgez60HaCXPTeXzIFUUHgNUYwrR/view?usp=drive_link"
-            ];
-
-            let linksComputadora = [
-                "https://drive.google.com/file/d/1fEwJ52xkanRigRJQEn4QACgrfHgFscdR/view?usp=drive_link",
-                "https://drive.google.com/file/d/1Fc5TtItJqZolgZTXnFA1dI9YJIRRbZFA/view?usp=drive_link"
-      
-            ];
-
-            let chosenLink;
-
-            if (device === 'celular') {
-                chosenLink = linksCelular[Math.floor(Math.random() * linksCelular.length)];
-            } else if (device === 'computadora') {
-                chosenLink = linksComputadora[Math.floor(Math.random() * linksComputadora.length)];
-            }
-
-            window.location.href = chosenLink;
-        }
-    </script>
-
+    <div class="container">
+        <!-- Botones -->
+        <a href="#" class="button">Botón 1</a>
+        <a href="#" class="button">Botón 2</a>
+        
+        <!-- Enlace debajo de los botones -->
+        <a href="https://vankiff.com" class="link">Visita Vankiff.com</a>
+    </div>
 </body>
 </html>
