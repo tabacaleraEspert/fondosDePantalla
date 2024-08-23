@@ -7,65 +7,77 @@
     
     <!-- Enlace a Google Fonts para la tipografía Encode Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-        /* Aplicar la tipografía Encode Sans a todo el documento */
+        /* Ajuste de la posición general */
+
         body {
             font-family: 'Encode Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('images/Barti_Mellow.jpg'); /* Imagen de fondo */
+            background-image: url('images/Barti_Mellow_1920x1080 limpio cortado.jpg'); /* Imagen de fondo */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding-top: 50px; /* Añadir espacio superior para mover todo hacia abajo */
+}
 
-        /* Estilos para los botones */
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px;
-            font-size: 16px;
-            font-weight: bold;
-            color: black;
-            background-color: transparent;
-            border: 2px solid black; /* Botón con línea negra */
-            text-decoration: none; /* Sin subrayado */
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-            cursor: pointer;
-        }
+/* Estilos para los botones */
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: transparent;
+    border: 2px solid black; /* Botón con línea negra */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    width: 200px; /* Ancho fijo para ambos botones */
+    height: 50px; /* Alto fijo para ambos botones */
+}
 
-        .button:hover {
-            background-color: black;
-            color: white;
-        }
+.button i {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
 
-        /* Estilo para el enlace */
-        .link {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            margin-top: 20px;
-        }
+.button:hover {
+    background-color: black;
+    color: white;
+}
 
-        .link:hover {
-            text-decoration: underline;
-        }
+/* Estilo para el enlace */
+.link {
+    text-decoration: none;
+    color: blue; /* Cambia el color del enlace a azul */
+    font-weight: bold;
+    margin-top: 20px;
+}
 
-        /* Estilo para el logo */
-        .logo {
-            max-width: 300px; /* Aumenta el tamaño máximo del logo */
-            margin-bottom: 20px; /* Espacio debajo del logo */
-        }
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para el logo */
+.logo {
+    max-width: 300px; /* Aumenta el tamaño máximo del logo */
+    margin-bottom: 20px; /* Espacio debajo del logo */
+}
+
     </style>
 </head>
 <body>
@@ -74,11 +86,16 @@
         <img src="images/logo negro 2.0.png" alt="Logo" class="logo">
         
         <!-- Botones -->
-        <button class="button" onclick="redirect('celular')">Celular</button>
-        <button class="button" onclick="redirect('computadora')">Computadora</button>
+           <!-- Botones con iconos -->
+           <button class="button" onclick="redirect('celular')">
+            <i class="fas fa-mobile-alt"></i> Celular
+        </button>
+        <button class="button" onclick="redirect('computadora')">
+            <i class="fas fa-laptop"></i> Computadora
+        </button>
         
         <!-- Enlace debajo de los botones -->
-        <a href="https://vankiff.com" class="link">Visita Vankiff.com</a>
+        <a href="https://vankiff.com" class="link">Visitá Vankiff.com</a>
     </div>
 </body>
 
