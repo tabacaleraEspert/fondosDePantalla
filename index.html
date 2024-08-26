@@ -11,16 +11,23 @@
 
     <style>
         /* Ajuste de la posición general */
+/* Estilo general para la página */
+body {
+    font-family: 'Encode Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/Barti_Mellow_1920x1080 limpio cortado.jpg'); /* Imagen de fondo por defecto */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-        body {
-            font-family: 'Encode Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('images/Barti_Mellow_1920x1080 limpio cortado.jpg'); /* Imagen de fondo */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
+/* Media query para cambiar el fondo en pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+    body {
+        background-image: url('images/Barti_Mellow.jpg'); /* Imagen de fondo específica para celulares */
+    }
+}
 
 .container {
     display: flex;
@@ -30,6 +37,9 @@
     flex-direction: column;
     padding-top: 50px; /* Añadir espacio superior para mover todo hacia abajo */
 }
+
+/* Otros estilos ya establecidos... */
+
 
 /* Estilos para los botones */
 .button {
@@ -61,11 +71,24 @@
 }
 
 /* Estilo para el enlace */
+/* Estilo para el enlace */
+/* Estilo para el enlace */
 .link {
     text-decoration: none;
-    color: blue; /* Cambia el color del enlace a azul */
+    color: black; /* Mantiene el color negro */
     font-weight: bold;
     margin-top: 20px;
+    display: flex;
+    align-items: center; /* Alinea el texto con el icono */
+}
+
+.link-text {
+    text-decoration: underline; /* Subraya el texto del enlace */
+    margin-left: 4px; /* Añade un pequeño margen después del icono */
+}
+
+.link i {
+    margin-left: 8px; /* Espacio entre "Visita" y el icono */
 }
 
 .link:hover {
@@ -95,7 +118,11 @@
         </button>
         
         <!-- Enlace debajo de los botones -->
-        <a href="https://vankiff.com" class="link">Visitá Vankiff.com</a>
+        <!-- Enlace debajo de los botones -->
+        <a href="https://vankiff.com" class="link">
+            Visitá <i class="fas fa-hand-point-right"></i> <t></t><span class="link-text">Vankiff.com</span>
+        </a>
+
     </div>
 </body>
 
