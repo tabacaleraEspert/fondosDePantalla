@@ -12,31 +12,50 @@
     <style>
         /* Ajuste de la posición general */
 /* Estilo general para la página */
+/* Estilo general para la página */
+/* Estilo general para la página */
 body {
     font-family: 'Encode Sans', sans-serif;
     margin: 0;
     padding: 0;
+    position: relative;
+    overflow: hidden; /* Evitar overflow por defecto */
     background-image: url('images/Barti_Mellow_1920x1080 limpio cortado.jpg'); /* Imagen de fondo por defecto */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
-/* Media query para cambiar el fondo en pantallas pequeñas (celulares) */
+/* Media query para detectar pantallas pequeñas (celulares) */
 @media (max-width: 768px) {
     body {
         background-image: url('images/Barti_Mellow.jpg'); /* Imagen de fondo específica para celulares */
+        overflow: hidden; /* Deshabilitar completamente el scrolling */
+        height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+    }
+    
+    html, body {
+        overflow: hidden;
+        touch-action: none; /* Deshabilita el scroll táctil en móviles */
+        overscroll-behavior: none; /* Previene rebotes en iOS */
     }
 }
 
+/* Estilo del contenedor */
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
     flex-direction: column;
     padding-top: 50px; /* Añadir espacio superior para mover todo hacia abajo */
+    position: relative;
+    z-index: 1;
 }
+
+
+/* Otros estilos ya establecidos... */
+
 
 /* Otros estilos ya establecidos... */
 
